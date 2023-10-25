@@ -1,3 +1,5 @@
 artifacts/
 scripts/
 /tests/
+test.sol
+.deps/
