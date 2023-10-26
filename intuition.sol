@@ -6,25 +6,12 @@ contract Intuition{
 
     event push(string indexed sign);
 
-    // function upload(
-    //     string memory name,
-    //     string memory fname,
-    //     string memory dob,
-    //     string memory course,
-    //     string memory degreeNo,
-    //     string memory regNo,
-    //     string memory instution,
-    //     string memory cnic,
-    //     string memory issueDate,
-    //     string memory cgpa,
-    //     string memory totalCgpa
-    //     )public pure returns(string memory qrData) {
-    //         bytes32 dataHash=sha256(abi.encodePacked(name,fname,dob,course,degreeNo,regNo,instution,cnic,issueDate,cgpa,totalCgpa));
-
-    //         return "Tid + hash of data";
-    //     }
+       
     function upload(string memory signature)public {
         emit push(signature);
+    }   
+    function uploadn()public {
+        emit push("signaturexxxxxxxxxxxxxxxxxxxxxxxxx");
     }
     
 }
