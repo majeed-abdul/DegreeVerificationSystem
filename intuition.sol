@@ -2,17 +2,13 @@
 pragma solidity ^0.8.13;
 
 contract Institution{
-    event push(string sign,string dataHash); 
+    event push(string datahash,string signature); 
     mapping(string=>string) public records  ;     
-    function upload(string memory signature,string memory dataHash)public returns(string memory){
-        records[dataHash]=signature;
+    function upload(string memory dataHash,string memory signature)public {
+        records[dataHash]=signature; 
         emit push(signature,dataHash);
-        return "done";
-    } function download(string memory dataHash)public view returns(string memory){ 
-        string memory sig=records[dataHash];
-        if(bytes(sig).length==0){
-            return "404";
-        }
+    }
+     function download(string memory dataHash)public view returns(string memory){ 
         return records[dataHash];
     }    
 }
